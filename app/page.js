@@ -2,7 +2,15 @@ import Head from 'next/head';
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillInstagram, AiFillMediumCircle} from 'react-icons/ai';
 import Image from 'next/image';
-import deved from '../public/dev-ed-wave.png';
+import oscardev from '../public/ovg-avatar.png';
+import design from '../public/design.png';
+import code from '../public/code.png';
+import consulting from '../public/consulting.png';
+import web1 from '../public/web1.png';
+import web2 from '../public/web2.png';
+import web3 from '../public/web3.png';
+import web4 from '../public/web4.png';
+import web5 from '../public/web5.png';
 
 export default function Home() {
   return (
@@ -37,7 +45,81 @@ export default function Home() {
             <AiFillMediumCircle />
           </div>
           <div className="relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mx-auto overflow-hidden">
-            <Image className='w-32 h-32 mx-auto my-4' src={deved} alt="emoticon" layout='fill' objectFit='cover' />
+            <Image className='w-32 h-32 mx-auto my-4' src={oscardev} alt="emoticon" layout='fill' objectFit='cover' objectPosition='center' />
+          </div>
+        </section>
+        {/* second section */}
+        <section className='py-10'>
+          <div className="text-center p-10">
+            <h3 className="text-3xl py-1">
+              Services I offer
+            </h3>
+            <p className="text-md py-2 leading-8 mb-4 text-gray-800">
+              Since the beginning of my journey as a software developer, 
+              I've done <span className="text-teal-500 font-bold">remote 
+              work</span>, doing <span className="text-teal-500 font-bold">pair-programming</span>, 
+              and <span className="text-teal-500 font-bold">collaborated </span> 
+              with talented people from all over the world.
+            </p>
+            <p className="text-md py-2 leading-8 mb-4 text-gray-800">
+              I offer from a wide range of services, including programming and teaching.
+            </p>
+          </div>
+          <div>
+            <div className="text-center shadow-lg p-10 rounded-xl my-10">
+                <Image src={design} width={100} height={100} className="mx-auto" />
+              <h3 className="text-lg font-medium pt-8 pb-2">Beautiful Designs</h3>
+              <p className="py-2">
+                Creating elegant designs suited for your needs design.
+              </p>
+              <h4 className="py-4 text-teal-600">Designs tools I use</h4>
+              <ul>
+                <li className="text-gray-800 py-1">Figma</li>
+                <li className="text-gray-800 py-1">Adobe XD</li>
+                <li className="text-gray-800 py-1">Adobe Photoshop</li>
+              </ul>
+            </div>
+            <div className="text-center shadow-lg p-10 rounded-xl my-10">
+                <Image src={consulting} width={100} height={100} className="mx-auto" />
+              <h3 className="text-lg font-medium pt-8 pb-2">Beautiful Designs</h3>
+              <p className="py-2">
+                Creating elegant designs suited for your needs design.
+              </p>
+              <h4 className="py-4 text-teal-600">Designs tools I use</h4>
+              <ul>
+                <li className="text-gray-800 py-1">Figma</li>
+                <li className="text-gray-800 py-1">Adobe XD</li>
+                <li className="text-gray-800 py-1">Adobe Photoshop</li>
+              </ul>
+            </div>
+            <div className="text-center shadow-lg p-10 rounded-xl my-10">
+                <Image src={code} width={100} height={100} className="mx-auto" />
+              <h3 className="text-lg font-medium pt-8 pb-2">Beautiful Designs</h3>
+              <p className="py-2">
+                Creating elegant designs suited for your needs design.
+              </p>
+              <h4 className="py-4 text-teal-600">Designs tools I use</h4>
+              <ul>
+                <li className="text-gray-800 py-1">Figma</li>
+                <li className="text-gray-800 py-1">Adobe XD</li>
+                <li className="text-gray-800 py-1">Adobe Photoshop</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <h3 className="text-3xl text-center py-1">Portfolio</h3>
+            <p className="text-md py-2 leading-8 mb-4 text-gray-800">
+              Since the beginning of my journey as a software developer, 
+              I've done <span className="text-teal-500 font-bold">remote 
+              work</span>, doing <span className="text-teal-500 font-bold">pair-programming</span>, 
+              and <span className="text-teal-500 font-bold">collaborated </span> 
+              with talented people from all over the world.
+            </p>
+            <p className="text-md py-2 leading-8 mb-4 text-gray-800">
+              I offer from a wide range of services, including programming and teaching.
+            </p>
           </div>
         </section>
       </main>
