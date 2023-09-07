@@ -1,5 +1,7 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+'use client';
+import './globals.css';
+import { Inter } from 'next/font/google';
+import { AnimatePresence } from 'framer-motion';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,4 +16,12 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>{children}</body>
     </html>
   )
+}
+
+export function MyApp({ Component, pageProps, router }) {
+  return (
+    <AnimatePresence mode='wait' initial={false}>
+      <Component key={router.pathname} {...pageProps} />
+    </AnimatePresence>
+  );
 }

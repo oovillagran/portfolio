@@ -19,6 +19,7 @@ import formImage from '../public/form.png';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useRouter } from 'next/navigation';
+import { motion as m } from 'framer-motion';
 // import { useSearchParams } from 'next/navigation';
 // import { usePathname } from 'next/navigation';
 
@@ -47,7 +48,7 @@ export default function Home() {
 
     // Submit form
     onSubmit: (values) => {
-      console.log(values);
+      // console.log(values);
       router.push('/success');
     },
   });
@@ -184,91 +185,101 @@ export default function Home() {
         </section>
 
       </main>
-      <section id='contact' className='h-screen flex items-center justify-center bg-gradient-to-l from-cyan-500 to-teal-500'>
-        <form
-          onSubmit={formik.handleSubmit}
-          className='bg-white flex flex-col md:flex-row rounded-lg w-3/4 font-latoRegular'
-        >
-          <div className='flex-1 text-gray-700 p-10'>
-            <h1 className='text-2xl md:text-4xl lg:text-5xl pb-4 font-latoBold'>
-              Let's connect 🤝
-            </h1>
-            <p className='text-md text-gray-500'>
-              If you have an application you are interested in developing, 
-              a feature you need built, or a project that needs coding. I'd 
-              love to help with it. Feel free to reach out to me. 
-              I'll do my best to get back to you!
-            </p>
-            <div className='mt-6'>
-              {/* Name input field */}
-              <div className='pb-4'>
-                <label
-                  className={`block font-latoBold text-sm pb-2 ${formik.touched.name && formik.errors.name ? 'text-red-500' : ''}`}
-                  htmlFor='name'
+
+      {/* Contact section */}
+      <m.div
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        exit={{opacity: 0}}
+        className='absolute w-full'
+      >
+      
+        <section id='contact' className='h-screen flex items-center justify-center bg-gradient-to-l from-cyan-500 to-teal-500'>
+          <form
+            onSubmit={formik.handleSubmit}
+            className='bg-white flex flex-col md:flex-row rounded-lg w-3/4 font-latoRegular'
+          >
+            <div className='flex-1 text-gray-700 p-10'>
+              <h1 className='text-2xl md:text-4xl lg:text-5xl pb-4 font-latoBold'>
+                Let's connect 🤝
+              </h1>
+              <p className='text-md text-gray-500'>
+                If you have an application you are interested in developing, 
+                a feature you need built, or a project that needs coding. I'd 
+                love to help with it. Feel free to reach out to me. 
+                I'll do my best to get back to you!
+              </p>
+              <div className='mt-6'>
+                {/* Name input field */}
+                <div className='pb-4'>
+                  <label
+                    className={`block font-latoBold text-sm pb-2 ${formik.touched.name && formik.errors.name ? 'text-red-500' : ''}`}
+                    htmlFor='name'
+                  >
+                    {formik.touched.name && formik.errors.name ? formik.errors.name : "Name:"}
+                  </label>
+                  <input
+                    className='border-2 border-gray-500 p-2 text-sm rounded-md w-3/4 lg:w-1/2 focus:border-teal-500 focus:ring-teal-500'
+                    type='text'
+                    name='name'
+                    placeholder='Enter your name'
+                    value={formik.values.name}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                </div>
+                {/* Email input field */}
+                <div className='pb-4'>
+                  <label
+                    className={`block font-latoBold text-sm pb-2 ${formik.touched.email && formik.errors.email ? 'text-red-500' : ''}`}
+                    htmlFor='email'
+                  >
+                    {formik.touched.email && formik.errors.email ? formik.errors.email : "Email:"}
+                  </label>
+                  <input
+                    className='border-2 border-gray-500 p-2 text-sm rounded-md w-3/4 lg:w-1/2 focus:border-teal-500 focus:ring-teal-500'
+                    type='email'
+                    name='email' 
+                    placeholder='Enter your email'
+                    value={formik.values.email}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                </div>
+                {/* Text area field */}
+                <div className='pb-4'>
+                  <label
+                    className={`block font-latoBold text-sm pb-2 ${formik.touched.text && formik.errors.text ? 'text-red-500' : ''}`}
+                    htmlFor='text'
+                  >
+                    {formik.touched.text && formik.errors.text ? formik.errors.text : "Write your message:"}
+                  </label>
+                  <textarea
+                    className='border-2 border-gray-500 p-2 text-sm rounded-md w-3/4 lg:w-1/2 focus:border-teal-500 focus:ring-teal-500 h-40'
+                    type='textarea'
+                    name='text' 
+                    placeholder='Write your message here...'
+                    style={{ resize: 'none' }}
+                    value={formik.values.text}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                </div>
+                {/* Submit button */}
+                <button
+                  type='submit'
+                  className='bg-teal-500 font-latoBold text-white px-4 py-2 rounded-md'
                 >
-                  {formik.touched.name && formik.errors.name ? formik.errors.name : "Name:"}
-                </label>
-                <input
-                  className='border-2 border-gray-500 p-2 text-sm rounded-md w-3/4 lg:w-1/2 focus:border-teal-500 focus:ring-teal-500'
-                  type='text'
-                  name='name'
-                  placeholder='Enter your name'
-                  value={formik.values.name}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                />
+                  Get in Touch
+                </button>
               </div>
-              {/* Email input field */}
-              <div className='pb-4'>
-                <label
-                  className={`block font-latoBold text-sm pb-2 ${formik.touched.email && formik.errors.email ? 'text-red-500' : ''}`}
-                  htmlFor='email'
-                >
-                  {formik.touched.email && formik.errors.email ? formik.errors.email : "Email:"}
-                </label>
-                <input
-                  className='border-2 border-gray-500 p-2 text-sm rounded-md w-3/4 lg:w-1/2 focus:border-teal-500 focus:ring-teal-500'
-                  type='email'
-                  name='email' 
-                  placeholder='Enter your email'
-                  value={formik.values.email}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                />
-              </div>
-              {/* Text area field */}
-              <div className='pb-4'>
-                <label
-                  className={`block font-latoBold text-sm pb-2 ${formik.touched.text && formik.errors.text ? 'text-red-500' : ''}`}
-                  htmlFor='text'
-                >
-                  {formik.touched.text && formik.errors.text ? formik.errors.text : "Write your message:"}
-                </label>
-                <textarea
-                  className='border-2 border-gray-500 p-2 text-sm rounded-md w-3/4 lg:w-1/2 focus:border-teal-500 focus:ring-teal-500 h-40'
-                  type='textarea'
-                  name='text' 
-                  placeholder='Write your message here...'
-                  style={{ resize: 'none' }}
-                  value={formik.values.text}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                />
-              </div>
-              {/* Submit button */}
-              <button
-                type='submit'
-                className='bg-teal-500 font-latoBold text-white px-4 py-2 rounded-md'
-              >
-                Get in Touch
-              </button>
             </div>
-          </div>
-          <div className='flex-1 relative'>
-            <Image src={formImage} alt="image" fill className='object-cover rounded-lg' />
-          </div>
-        </form>
-      </section>
+            <div className='flex-1 relative'>
+              <Image src={formImage} alt="image" fill className='object-cover rounded-lg' />
+            </div>
+          </form>
+        </section>
+      </m.div>
     </div>
   );
 }
