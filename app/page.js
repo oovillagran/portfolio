@@ -11,12 +11,46 @@ import web1 from '../public/web1.png';
 import web2 from '../public/web2.png';
 import web3 from '../public/web3.png';
 import web4 from '../public/web4.png';
-import web5 from '../public/web5.png';
-import web6 from '../public/web6.png';
+import web5 from '../public/EasyClinics.png';
+import web6 from '../public/EasyClinics-Appointment.png';
 import { useState } from 'react';
+import '@tailwindcss/forms';
+import formImage from '../public/form.png';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { useRouter } from 'next/navigation';
+// import { useSearchParams } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  // const pathname = usePathname();
+
+
+  // Router
+  const router = useRouter();
+
+  // Formic Logics
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      text: '',
+    },
+
+    // validate form
+    validationSchema: Yup.object({
+      name: Yup.string().max(20, 'Name must be 20 characters or less').required('Name is Required'),
+      email: Yup.string().email('Invalid email address').required('Email is Required'),
+      text: Yup.string().max(300, 'Message must be 300 characters or less').required('Message is Required'),
+    }),
+
+    // Submit form
+    onSubmit: (values) => {
+      console.log(values);
+      router.push('/success');
+    },
+  });
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -35,6 +69,7 @@ export default function Home() {
                 <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl dark:text-gray-200'/>
               </li>
               <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="#">Resume</a></li>
+              <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="#contact">Contact</a></li>
             </ul>
           </nav>
           <div className="text-center p-10">
@@ -147,7 +182,93 @@ export default function Home() {
             </div>
           </div>
         </section>
+
       </main>
+      <section id='contact' className='h-screen flex items-center justify-center bg-gradient-to-l from-cyan-500 to-teal-500'>
+        <form
+          onSubmit={formik.handleSubmit}
+          className='bg-white flex flex-col md:flex-row rounded-lg w-3/4 font-latoRegular'
+        >
+          <div className='flex-1 text-gray-700 p-10'>
+            <h1 className='text-2xl md:text-4xl lg:text-5xl pb-4 font-latoBold'>
+              Let's connect 🤝
+            </h1>
+            <p className='text-md text-gray-500'>
+              If you have an application you are interested in developing, 
+              a feature you need built, or a project that needs coding. I'd 
+              love to help with it. Feel free to reach out to me. 
+              I'll do my best to get back to you!
+            </p>
+            <div className='mt-6'>
+              {/* Name input field */}
+              <div className='pb-4'>
+                <label
+                  className={`block font-latoBold text-sm pb-2 ${formik.touched.name && formik.errors.name ? 'text-red-500' : ''}`}
+                  htmlFor='name'
+                >
+                  {formik.touched.name && formik.errors.name ? formik.errors.name : "Name:"}
+                </label>
+                <input
+                  className='border-2 border-gray-500 p-2 text-sm rounded-md w-3/4 lg:w-1/2 focus:border-teal-500 focus:ring-teal-500'
+                  type='text'
+                  name='name'
+                  placeholder='Enter your name'
+                  value={formik.values.name}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+              </div>
+              {/* Email input field */}
+              <div className='pb-4'>
+                <label
+                  className={`block font-latoBold text-sm pb-2 ${formik.touched.email && formik.errors.email ? 'text-red-500' : ''}`}
+                  htmlFor='email'
+                >
+                  {formik.touched.email && formik.errors.email ? formik.errors.email : "Email:"}
+                </label>
+                <input
+                  className='border-2 border-gray-500 p-2 text-sm rounded-md w-3/4 lg:w-1/2 focus:border-teal-500 focus:ring-teal-500'
+                  type='email'
+                  name='email' 
+                  placeholder='Enter your email'
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+              </div>
+              {/* Text area field */}
+              <div className='pb-4'>
+                <label
+                  className={`block font-latoBold text-sm pb-2 ${formik.touched.text && formik.errors.text ? 'text-red-500' : ''}`}
+                  htmlFor='text'
+                >
+                  {formik.touched.text && formik.errors.text ? formik.errors.text : "Write your message:"}
+                </label>
+                <textarea
+                  className='border-2 border-gray-500 p-2 text-sm rounded-md w-3/4 lg:w-1/2 focus:border-teal-500 focus:ring-teal-500 h-40'
+                  type='textarea'
+                  name='text' 
+                  placeholder='Write your message here...'
+                  style={{ resize: 'none' }}
+                  value={formik.values.text}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+              </div>
+              {/* Submit button */}
+              <button
+                type='submit'
+                className='bg-teal-500 font-latoBold text-white px-4 py-2 rounded-md'
+              >
+                Get in Touch
+              </button>
+            </div>
+          </div>
+          <div className='flex-1 relative'>
+            <Image src={formImage} alt="image" fill className='object-cover rounded-lg' />
+          </div>
+        </form>
+      </section>
     </div>
   );
 }
