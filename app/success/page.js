@@ -2,8 +2,12 @@
 import { motion as m } from "framer-motion";
 import { useEffect, useState } from "react";
 import Confetti from "react-confetti";
+import Navbar from "../navbar";
+import { useDarkMode } from "../DarkModeContext";
 
 export default function Success() {
+  const { darkMode } = useDarkMode();
+
   const [pieces, setPieces] = useState(200);
   const stopConfetti = () => {
     setTimeout(() => {
@@ -20,17 +24,20 @@ export default function Success() {
     initial={{opacity: 0}}
     animate={{opacity: 1}}
     exit={{opacity: 0}}
-    className='h-screen flex items-center justify-center bg-gradient-to-l from-cyan-500 to-teal-500'
+    className='h-screen flex-column justify-center md:px-10 lg:px-20 '
     >
-      <div className="bg-white rounded-lg w-3/4 font-latoRegular text-center text-gray-700 p-8">
-        <h1 className="text-2xl pb-4 font-latoBold">
-          Thanks for the email 💫
-        </h1>
-        <p className="text-md text-gray-500">
-          I'll get back to you as soon as possible.
-        </p>
+      <div className={darkMode ? "dark" : ""}>
+        <Navbar />
+        <div className="bg-white justify-center m-auto rounded-lg w-3/4 font-latoRegular text-center p-8">
+          <h1 className="text-2xl pb-4 font-latoBold dark:text-teal-500">
+            Thanks for the message 💫
+          </h1>
+          <p className="text-md text-gray-500 dark:text-gray-200">
+            I'll get back to you as soon as possible.
+          </p>
+        </div>
+        <Confetti gravity={0.1} numberOfPieces={pieces} />
       </div>
-      <Confetti gravity={0.1} numberOfPieces={pieces} />
     </m.main>
   )
 }

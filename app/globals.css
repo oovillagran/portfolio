@@ -41,5 +41,5 @@ a {
 
 /* Dark mode background color */
 .dark .bg-white {
-  background-color: #000; /* Change this to your desired dark mode background color */
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity)); /* Change this to your desired dark mode background color */
 }

@@ -1,6 +1,5 @@
 'use client';
 import Head from 'next/head';
-import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillInstagram, AiFillMediumCircle} from 'react-icons/ai';
 import Image from 'next/image';
 import oscardev from '../public/ovg-avatar.png';
@@ -13,20 +12,17 @@ import web3 from '../public/web3.png';
 import web4 from '../public/web4.png';
 import web5 from '../public/EasyClinics.png';
 import web6 from '../public/EasyClinics-Appointment.png';
-import { useState } from 'react';
 import '@tailwindcss/forms';
 import formImage from '../public/form.png';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useRouter } from 'next/navigation';
 import { motion as m } from 'framer-motion';
-// import { useSearchParams } from 'next/navigation';
-// import { usePathname } from 'next/navigation';
+import Navbar from './navbar';
+import { useDarkMode } from './DarkModeContext';
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-  // const pathname = usePathname();
-
+  const { darkMode } = useDarkMode();
 
   // Router
   const router = useRouter();
@@ -48,7 +44,6 @@ export default function Home() {
 
     // Submit form
     onSubmit: (values) => {
-      // console.log(values);
       router.push('/success');
     },
   });
@@ -61,40 +56,39 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
+      <main className='bg-white md:px-10 lg:px-20 dark:bg-gray-900'>
         <section className="min-h-screen">
-          <nav className='py-10 mb-12 flex justify-between'>
-            <h1 className='text-xl font-burtons dark:text-gray-200'>alfa&omega</h1>
-            <ul className='flex items-center'>
-              <li>
-                <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl dark:text-gray-200'/>
-              </li>
-              <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="#">Resume</a></li>
-              <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="#contact">Contact</a></li>
-            </ul>
-          </nav>
+          <Navbar />
           <div className="text-center p-10">
             <h2 className='text-5xl py-2 text-teal-600 font-bold md:text-6xl'>Hi, I'm Oscar</h2>
             <h3 className='text-2xl py-2 font-bold mb-4 md:text-3xl dark:text-gray-200'>Software developer</h3>
             <p className='text-md py-5 leading-8 mb-4 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-200'>I'm a software engineer based in Santo Domingo, Ecuador. I have a passion for creating beautiful and functional websites and applications. Join me down below and let's get in touch!</p>
           </div>
           <div className="text-3xl flex justify-center gap-8 py-3 text-gray-600">
-            <AiFillTwitterCircle className='dark:text-gray-200'/>
-            <AiFillGithub className='dark:text-gray-200' />
-            <AiFillLinkedin className='dark:text-gray-200' />
-            <AiFillInstagram className='dark:text-gray-200' />
-            <AiFillMediumCircle className='dark:text-gray-200' />
+            <a href='https://twitter.com/oovillagran' target='_blank' rel='noopener noreferrer'>
+              <AiFillTwitterCircle className='dark:text-gray-200 transition-transform transform hover:scale-110 hover:text-teal-600 dark:hover:text-teal-600'/>
+            </a>
+            <a href='https://github.com/oovillagran' target='_blank' rel='noopener noreferrer'>
+              <AiFillGithub className='dark:text-gray-200 transition-transform transform hover:scale-110 hover:text-teal-600 dark:hover:text-teal-600' />
+            </a>
+            <a href='https://www.linkedin.com/in/oovillagran/' target='_blank' rel='noopener noreferrer'>
+              <AiFillLinkedin className='dark:text-gray-200 transition-transform transform hover:scale-110 hover:text-teal-600 dark:hover:text-teal-600' />
+            </a>
+            <a href='https://www.instagram.com/ovillagran/' target='_blank' rel='noopener noreferrer'>
+              <AiFillInstagram className='dark:text-gray-200 transition-transform transform hover:scale-110 hover:text-teal-600 dark:hover:text-teal-600' />
+            </a>
+            <a href='https://medium.com/@oovillagg' target='_blank' rel='noopener noreferrer'>
+              <AiFillMediumCircle className='dark:text-gray-200 transition-transform transform hover:scale-110 hover:text-teal-600 dark:hover:text-teal-600' />
+            </a>
           </div>
           <div className="relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mx-auto overflow-hidden md:h-96 md:w-96">
             <Image className='w-32 h-32 mx-auto my-4' src={oscardev} alt="emoticon" layout='fill' objectFit='cover' objectPosition='center' />
           </div>
         </section>
         {/* second section */}
-        <section className='py-10'>
-          <div className="text-center p-10">
-            <h3 className="text-3xl py-1 dark:text-gray-200">
-              Services I offer
-            </h3>
+        <section>
+          <div>
+            <h3 className="text-3xl text-center py-1 dark:text-gray-200">Portfolio</h3>
             <p className="text-md py-2 leading-8 mb-4 text-gray-800 md:text-xl dark:text-gray-200">
               Since the beginning of my journey as a software developer, 
               I've done <span className="text-teal-500 font-bold">remote 
@@ -105,6 +99,49 @@ export default function Home() {
             <p className="text-md py-2 leading-8 mb-4 text-gray-800 md:text-xl dark:text-gray-200">
               I offer from a wide range of services, including programming and teaching.
             </p>
+          </div>
+          <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
+            <div className="basis-1/3 flex-1">
+              <Image src={web1} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
+            </div>
+            <div className="basis-1/3 flex-1">
+              <Image src={web2} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
+            </div>
+            <div className="basis-1/3 flex-1">
+              <Image src={web3} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
+            </div>
+            <div className="basis-1/3 flex-1">
+              <Image src={web4} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
+            </div>
+            <div className="basis-1/3 flex-1">
+              <Image src={web5} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
+            </div>
+            <div className="basis-1/3 flex-1">
+              <Image src={web6} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
+            </div>
+          </div>
+        </section>
+      {/* About me */}
+      <section id='about' className='py-1'>
+          <div className="text-center p-10">
+            <h3 className="text-3xl py-1 dark:text-teal-500 font-bold">
+              About me
+            </h3>
+            <p className="text-md py-2 leading-6 mb-4 text-gray-800 md:text-xl dark:text-gray-200">
+              Since the beginning of my journey as a software developer, 
+              I've done <span className="text-teal-500 font-bold">remote 
+              work</span>, doing <span className="text-teal-500 font-bold">pair-programming</span>, 
+              and <span className="text-teal-500 font-bold">collaborated </span> 
+              with talented people from all over the world.
+            </p>
+            <p className="text-md py-2 leading-6 mb-4 text-gray-800 md:text-xl dark:text-gray-200">
+            I can help you build a product , feature or website. Look through some of my work and experience!
+            <br /> 
+            If you like what you see and have a project you need coded, don’t hesitate to contact me.
+            </p>
+          </div>
+          <div>
+          <p className='transition-transform transform hover:scale-105'><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 hover:text-gray-800" href="#">Get my resume</a></p>
           </div>
           <div className='lg:flex gap-10'>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
@@ -148,42 +185,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
-          <div>
-            <h3 className="text-3xl text-center py-1 dark:text-gray-200">Portfolio</h3>
-            <p className="text-md py-2 leading-8 mb-4 text-gray-800 md:text-xl dark:text-gray-200">
-              Since the beginning of my journey as a software developer, 
-              I've done <span className="text-teal-500 font-bold">remote 
-              work</span>, doing <span className="text-teal-500 font-bold">pair-programming</span>, 
-              and <span className="text-teal-500 font-bold">collaborated </span> 
-              with talented people from all over the world.
-            </p>
-            <p className="text-md py-2 leading-8 mb-4 text-gray-800 md:text-xl dark:text-gray-200">
-              I offer from a wide range of services, including programming and teaching.
-            </p>
-          </div>
-          <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
-            <div className="basis-1/3 flex-1">
-              <Image src={web1} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image src={web2} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image src={web3} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image src={web4} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image src={web5} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image src={web6} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
-            </div>
-          </div>
-        </section>
-
       </main>
 
       {/* Contact section */}
@@ -199,21 +200,21 @@ export default function Home() {
             onSubmit={formik.handleSubmit}
             className='bg-white flex flex-col md:flex-row rounded-lg w-3/4 font-latoRegular'
           >
-            <div className='flex-1 text-gray-700 p-10'>
-              <h1 className='text-2xl md:text-4xl lg:text-5xl pb-4 font-latoBold'>
+            <div className='flex-1 text-gray-700 p-5'>
+              <h1 className='text-2xl md:text-4xl lg:text-5xl pb-2 font-latoBold dark:text-teal-500'>
                 Let's connect 🤝
               </h1>
-              <p className='text-md text-gray-500'>
+              <p className='text-md text-gray-500 dark:text-gray-200'>
                 If you have an application you are interested in developing, 
                 a feature you need built, or a project that needs coding. I'd 
                 love to help with it. Feel free to reach out to me. 
                 I'll do my best to get back to you!
               </p>
-              <div className='mt-6'>
+              <div className='mt-5'>
                 {/* Name input field */}
                 <div className='pb-4'>
                   <label
-                    className={`block font-latoBold text-sm pb-2 ${formik.touched.name && formik.errors.name ? 'text-red-500' : ''}`}
+                    className={`block font-latoBold text-sm pb-2 ${formik.touched.name && formik.errors.name ? 'text-red-500' : ''} dark:text-gray-200`}
                     htmlFor='name'
                   >
                     {formik.touched.name && formik.errors.name ? formik.errors.name : "Name:"}
@@ -231,7 +232,7 @@ export default function Home() {
                 {/* Email input field */}
                 <div className='pb-4'>
                   <label
-                    className={`block font-latoBold text-sm pb-2 ${formik.touched.email && formik.errors.email ? 'text-red-500' : ''}`}
+                    className={`block font-latoBold text-sm pb-2 ${formik.touched.email && formik.errors.email ? 'text-red-500' : ''} dark:text-gray-200`}
                     htmlFor='email'
                   >
                     {formik.touched.email && formik.errors.email ? formik.errors.email : "Email:"}
@@ -249,7 +250,7 @@ export default function Home() {
                 {/* Text area field */}
                 <div className='pb-4'>
                   <label
-                    className={`block font-latoBold text-sm pb-2 ${formik.touched.text && formik.errors.text ? 'text-red-500' : ''}`}
+                    className={`block font-latoBold text-sm pb-2 ${formik.touched.text && formik.errors.text ? 'text-red-500' : ''} dark:text-gray-200`}
                     htmlFor='text'
                   >
                     {formik.touched.text && formik.errors.text ? formik.errors.text : "Write your message:"}
