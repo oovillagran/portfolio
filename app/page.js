@@ -18,7 +18,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useRouter } from 'next/navigation';
 import { motion as m } from 'framer-motion';
-import Navbar from './navbar';
+import Navbar from './components/navbar';
 import { useDarkMode } from './DarkModeContext';
 
 export default function Home() {
@@ -59,10 +59,13 @@ export default function Home() {
       <main className='bg-white md:px-10 lg:px-20 dark:bg-gray-900'>
         <section className="min-h-screen">
           <Navbar />
-          <div className="text-center p-10">
+          <div className="text-center p-10 py-40">
             <h2 className='text-5xl py-2 text-teal-600 font-bold md:text-6xl'>Hi, I'm Oscar</h2>
             <h3 className='text-2xl py-2 font-bold mb-4 md:text-3xl dark:text-gray-200'>Software developer</h3>
-            <p className='text-md py-5 leading-8 mb-4 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-200'>I'm a software engineer based in Santo Domingo, Ecuador. I have a passion for creating beautiful and functional websites and applications. Join me down below and let's get in touch!</p>
+            <p className='text-md py-5 leading-8 mb-4 text-gray-800 md:text-xl mx-auto dark:text-gray-200'>
+              I'm a software engineer based in Santo Domingo, Ecuador. I have a passion 
+              for creating beautiful and functional websites and applications. 
+              Join me down below and let's get in touch!</p>
           </div>
           <div className="text-3xl flex justify-center gap-8 py-3 text-gray-600">
             <a href='https://twitter.com/oovillagran' target='_blank' rel='noopener noreferrer'>
@@ -86,7 +89,7 @@ export default function Home() {
           </div>
         </section>
         {/* second section */}
-        <section>
+        <section id='portfolio'>
           <div>
             <h3 className="text-3xl text-center py-1 dark:text-gray-200">Portfolio</h3>
             <p className="text-md py-2 leading-8 mb-4 text-gray-800 md:text-xl dark:text-gray-200">
