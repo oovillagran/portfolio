@@ -21,11 +21,12 @@ import { motion as m } from 'framer-motion';
 import Navbar from './components/navbar';
 import { useDarkMode } from './DarkModeContext';
 import Connect from './components/Connect';
-import {AiFillHtml5} from 'react-icons/ai';
+import {AiFillGithub, AiFillHtml5} from 'react-icons/ai';
 import {BiLogoCss3, BiLogoJavascript, BiLogoPostgresql, BiLogoTailwindCss, BiLogoReact, BiLogoRedux} from 'react-icons/bi';
 import {DiRuby, DiBootstrap} from 'react-icons/di';
 import {SiRubyonrails} from 'react-icons/si';
 import {GiNothingToSay} from 'react-icons/gi';
+import {LuArrowDownRightFromCircle} from 'react-icons/lu'
 
 export default function Home() {
   const { darkMode } = useDarkMode();
@@ -111,6 +112,96 @@ export default function Home() {
             </div>
             <div className="basis-1/3 flex-1">
               <Image src={web6} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
+            </div>
+            <div className='flex-col gap-10 md:flex min-h-screen items-center justify-center bg-slate-100'>
+              <div className='group h-96 w-96 [perspective:1000px]'>
+                <div className='relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(360deg)]'>
+                  <div className='absolute inset-0'>
+                    <Image src={web6} className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
+                  </div>
+                  <div className='absolute inset-0 h-full w-full rounded-xl bg-black/60 px-12 text-center text-slate-200 [transform:rotateY(360deg)] transition-opacity opacity-0 group-hover:opacity-100'>
+                    <div className='flex min-h-full flex-col items-center justify-center'>
+                      <h1 className='text-3xl font-bold text-teal-200'>
+                        Easy Clinics
+                      </h1>
+                      <p className='text-lg'>
+                        FrontEnd and BackEnd App
+                      </p>
+                      <p className='text-base'>
+                        This awesome app allows you to make an appointment with your favorite doctor in your preferred city.
+                      </p>
+                      <div className='flex justify-between w-full'>
+                        <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
+                          See Live
+                          <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
+                        </button>
+                        <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
+                          See Source
+                          <AiFillGithub className='inline-block ml-2 text-xl' />
+                        </button>
+                      </div>
+                      <div className='flex items-center flex-wrap py-5 justify-center'>
+                        <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
+                          React
+                        </p>
+                        <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
+                          Redux
+                        </p>
+                        <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
+                          Rails
+                        </p>
+                        <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
+                          PostgreSQL
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='group h-96 w-96 [perspective:1000px]'>
+                <div className='relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(360deg)]'>
+                  <div className='absolute inset-0'>
+                    <Image src={web6} className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
+                  </div>
+                  <div className='absolute inset-0 h-full w-full rounded-xl bg-black/60 px-12 text-center text-slate-200 [transform:rotateY(360deg)] transition-opacity opacity-0 group-hover:opacity-100'>
+                    <div className='flex min-h-full flex-col items-center justify-center'>
+                      <h1 className='text-3xl font-bold text-teal-200'>
+                        Easy Clinics
+                      </h1>
+                      <p className='text-lg'>
+                        FrontEnd and BackEnd App
+                      </p>
+                      <p className='text-base'>
+                        This awesome app allows you to make an appointment with your favorite doctor in your preferred city.
+                      </p>
+                      <div className='flex justify-between w-full'>
+                        <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
+                          See Live
+                          <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
+                        </button>
+                        <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
+                          See Source
+                          <AiFillGithub className='inline-block ml-2 text-xl' />
+                        </button>
+                      </div>
+                      <div className='flex items-center flex-wrap py-5 justify-center'>
+                        <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
+                          React
+                        </p>
+                        <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
+                          Redux
+                        </p>
+                        <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
+                          Rails
+                        </p>
+                        <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
+                          PostgreSQL
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -24,7 +24,7 @@ export default function Success() {
     initial={{opacity: 0}}
     animate={{opacity: 1}}
     exit={{opacity: 0}}
-    className='h-screen flex-column justify-center md:px-10 lg:px-20 '
+    className='h-screen flex-column justify-center'
     >
       <div className={darkMode ? "dark" : ""}>
         <Navbar />

@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <div className={darkMode ? 'dark' : ''}>
       {/* ... (Head and other content) */}
-      <header className="bg-white dark:bg-gray-900">
+      <header className="bg-white dark:bg-gray-900 w-full">
         <nav className="py-10 mb-5 flex-row justify-between">
           <div className='justify-between w-full mx-auto md:items-center md:flex md:px-0'>
             <div className='md:flex items-center w-full'>
