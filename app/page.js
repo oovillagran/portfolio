@@ -1,11 +1,11 @@
 'use client';
 import Head from 'next/head';
-import {AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillInstagram, AiFillMediumCircle} from 'react-icons/ai';
 import Image from 'next/image';
 import oscardev from '../public/ovg-avatar.png';
-import design from '../public/design.png';
+import languages from '../public/languages1.jpg';
+import framework from '../public/framework.jpg';
+import skills from '../public/skills.jpg';
 import code from '../public/code.png';
-import consulting from '../public/consulting.png';
 import web1 from '../public/web1.png';
 import web2 from '../public/web2.png';
 import web3 from '../public/web3.png';
@@ -20,6 +20,12 @@ import { useRouter } from 'next/navigation';
 import { motion as m } from 'framer-motion';
 import Navbar from './components/navbar';
 import { useDarkMode } from './DarkModeContext';
+import Connect from './components/Connect';
+import {AiFillHtml5} from 'react-icons/ai';
+import {BiLogoCss3, BiLogoJavascript, BiLogoPostgresql, BiLogoTailwindCss, BiLogoReact, BiLogoRedux} from 'react-icons/bi';
+import {DiRuby, DiBootstrap} from 'react-icons/di';
+import {SiRubyonrails} from 'react-icons/si';
+import {GiNothingToSay} from 'react-icons/gi';
 
 export default function Home() {
   const { darkMode } = useDarkMode();
@@ -59,37 +65,21 @@ export default function Home() {
       <main className='bg-white md:px-10 lg:px-20 dark:bg-gray-900'>
         <section className="min-h-screen">
           <Navbar />
-          <div className="text-center p-10 py-40">
+          <div className="text-center p-10 py-15">
             <h2 className='text-5xl py-2 text-teal-600 font-bold md:text-6xl'>Hi, I'm Oscar</h2>
             <h3 className='text-2xl py-2 font-bold mb-4 md:text-3xl dark:text-gray-200'>Software developer</h3>
-            <p className='text-md py-5 leading-8 mb-4 text-gray-800 md:text-xl mx-auto dark:text-gray-200'>
+            <p className='text-md py-5 leading-8 text-gray-800 md:text-xl mx-auto dark:text-gray-200'>
               I'm a software engineer based in Santo Domingo, Ecuador. I have a passion 
               for creating beautiful and functional websites and applications. 
               Join me down below and let's get in touch!</p>
           </div>
-          <div className="text-3xl flex justify-center gap-8 py-3 text-gray-600">
-            <a href='https://twitter.com/oovillagran' target='_blank' rel='noopener noreferrer'>
-              <AiFillTwitterCircle className='dark:text-gray-200 transition-transform transform hover:scale-110 hover:text-teal-600 dark:hover:text-teal-600'/>
-            </a>
-            <a href='https://github.com/oovillagran' target='_blank' rel='noopener noreferrer'>
-              <AiFillGithub className='dark:text-gray-200 transition-transform transform hover:scale-110 hover:text-teal-600 dark:hover:text-teal-600' />
-            </a>
-            <a href='https://www.linkedin.com/in/oovillagran/' target='_blank' rel='noopener noreferrer'>
-              <AiFillLinkedin className='dark:text-gray-200 transition-transform transform hover:scale-110 hover:text-teal-600 dark:hover:text-teal-600' />
-            </a>
-            <a href='https://www.instagram.com/ovillagran/' target='_blank' rel='noopener noreferrer'>
-              <AiFillInstagram className='dark:text-gray-200 transition-transform transform hover:scale-110 hover:text-teal-600 dark:hover:text-teal-600' />
-            </a>
-            <a href='https://medium.com/@oovillagg' target='_blank' rel='noopener noreferrer'>
-              <AiFillMediumCircle className='dark:text-gray-200 transition-transform transform hover:scale-110 hover:text-teal-600 dark:hover:text-teal-600' />
-            </a>
-          </div>
+          <Connect />
           <div className="relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mx-auto overflow-hidden md:h-96 md:w-96">
             <Image className='w-32 h-32 mx-auto my-4' src={oscardev} alt="emoticon" layout='fill' objectFit='cover' objectPosition='center' />
           </div>
         </section>
         {/* second section */}
-        <section id='portfolio'>
+        <section id='portfolio' className='py-20'>
           <div>
             <h3 className="text-3xl text-center py-1 dark:text-gray-200">Portfolio</h3>
             <p className="text-md py-2 leading-8 mb-4 text-gray-800 md:text-xl dark:text-gray-200">
@@ -126,8 +116,8 @@ export default function Home() {
         </section>
       {/* About me */}
       <section id='about' className='py-1'>
-          <div className="text-center p-10">
-            <h3 className="text-3xl py-1 dark:text-teal-500 font-bold">
+          <div className="text-center p-15">
+            <h3 className="text-3xl py-1 dark:text-teal-500 font-bold my-10">
               About me
             </h3>
             <p className="text-md py-2 leading-6 mb-4 text-gray-800 md:text-xl dark:text-gray-200">
@@ -143,47 +133,134 @@ export default function Home() {
             If you like what you see and have a project you need coded, don’t hesitate to contact me.
             </p>
           </div>
-          <div>
-          <p className='transition-transform transform hover:scale-105'><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 hover:text-gray-800" href="#">Get my resume</a></p>
+          <Connect />
+          <div className='py-5'>
+            <p className='transition-transform transform hover:scale-105'><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 hover:text-gray-800" href="#">Get my resume</a></p>
           </div>
           <div className='lg:flex gap-10'>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
-              <Image src={design} width={100} height={100} className="mx-auto" />
-              <h3 className="text-lg font-medium pt-8 pb-2">Beautiful Designs</h3>
+            <div className="md:w-1/3 text-center shadow-lg p-10 rounded-xl my-10 mx-10 md:mx-0 dark:bg-white">
+              <Image src={languages} width={200} height={200} className="mx-auto rounded-full" objectFit='cover' />
+              <h3 className="text-lg font-medium pt-8 pb-2">Languages</h3>
               <p className="py-2 md:text-xl">
-                Creating elegant designs suited for your needs design.
+                Creating elegant and practical app suited for your needs.
               </p>
-              <h4 className="py-4 text-teal-600">Designs tools I use</h4>
-              <ul>
-                <li className="text-gray-800 py-1">Figma</li>
-                <li className="text-gray-800 py-1">Adobe XD</li>
-                <li className="text-gray-800 py-1">Adobe Photoshop</li>
+              <h4 className="py-4 text-teal-600">Languages I use</h4>
+              <ul className='flex text-center items-center justify-center flex-wrap mx-auto'>
+                <li className="text-gray-800 py-1 flex justify-center pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    HTML
+                  </p>
+                  <AiFillHtml5 className='text-3xl text-center text-teal-600' />
+                </li>
+                <li className="text-gray-800 py-1 flex justify-center pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    CSS
+                  </p>
+                  <BiLogoCss3 className='text-3xl text-center text-teal-600' />
+                </li>
+                <li className="text-gray-800 py-1 flex justify-center pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    JavaScript
+                  </p>
+                  <BiLogoJavascript className='text-3xl text-teal-600' />
+                </li>
+                <li className="text-gray-800 py-1 flex justify-center pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    PostgreSQL
+                  </p>
+                  <BiLogoPostgresql className='text-3xl text-teal-600' />
+                </li>
+                <li className="text-gray-800 flex justify-center py-1 pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    Ruby
+                  </p>
+                  <DiRuby className='text-3xl text-teal-600'/>
+                </li>
               </ul>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
-                <Image src={consulting} width={100} height={100} className="mx-auto" />
-              <h3 className="text-lg font-medium pt-8 pb-2">Beautiful Designs</h3>
+            <div className="md:w-1/3 text-center shadow-lg p-10 rounded-xl my-10 mx-10 md:mx-0 dark:bg-white">
+              <Image src={framework} width={200} height={200} className="rounded-full mx-auto" />
+              <h3 className="text-lg font-medium pt-8 pb-2">Frameworks</h3>
               <p className="py-2 md:text-xl">
-                Creating elegant designs suited for your needs design.
+                Creating awesome and practical apps.
               </p>
-              <h4 className="py-4 text-teal-600">Designs tools I use</h4>
-              <ul>
-                <li className="text-gray-800 py-1">Figma</li>
-                <li className="text-gray-800 py-1">Adobe XD</li>
-                <li className="text-gray-800 py-1">Adobe Photoshop</li>
+              <h4 className="py-4 text-teal-600">Frameworks I use</h4>
+              <ul className='flex text-center items-center justify-center flex-wrap mx-auto'>
+                <li className="text-gray-800 py-1 flex justify-center pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    Bootstrap
+                  </p>
+                  <DiBootstrap className='text-3xl text-center text-teal-600' />
+                </li>
+                <li className="text-gray-800 py-1 flex justify-center pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    TailwindCSS
+                  </p>
+                  <BiLogoTailwindCss className='text-3xl text-center text-teal-600' />
+                </li>
+                <li className="text-gray-800 py-1 flex justify-center pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    React
+                  </p>
+                  <BiLogoReact className='text-3xl text-teal-600' />
+                </li>
+                <li className="text-gray-800 py-1 flex justify-center pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    Redux
+                  </p>
+                  <BiLogoRedux className='text-3xl text-teal-600' />
+                </li>
+                <li className="text-gray-800 flex justify-center py-1 pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    Rails
+                  </p>
+                  <SiRubyonrails className='text-4xl text-teal-600'/>
+                </li>
               </ul>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
-                <Image src={code} width={100} height={100} className="mx-auto" />
-              <h3 className="text-lg font-medium pt-8 pb-2">Beautiful Designs</h3>
+            <div className="md:w-1/3 text-center shadow-lg p-10 rounded-xl my-10 mx-10 md:mx-0 dark:bg-white">
+                <Image src={skills} width={125} height={125} className="mx-auto" />
+              <h3 className="text-lg font-medium pt-8 pb-2">Skills</h3>
               <p className="py-2 md:text-xl">
-                Creating elegant designs suited for your needs design.
+                Soft skills developed along my career.
               </p>
-              <h4 className="py-4 text-teal-600">Designs tools I use</h4>
-              <ul>
-                <li className="text-gray-800 py-1">Figma</li>
-                <li className="text-gray-800 py-1">Adobe XD</li>
-                <li className="text-gray-800 py-1">Adobe Photoshop</li>
+              <h4 className="py-4 text-teal-600">My potential soft skills are</h4>
+              <ul className='flex text-center items-center justify-center flex-wrap mx-auto'>
+                <li li className="text-gray-800 py-1 flex justify-center pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    Effective communication
+                  </p>
+                </li>
+                <li className="text-gray-800 py-1 flex justify-center pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    Adaptability
+                  </p>
+                </li>
+                <li className="text-gray-800 py-1 flex justify-center pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    Problem solving
+                  </p>
+                </li>
+                <li className="text-gray-800 py-1 flex justify-center pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    Time Management
+                  </p>
+                </li>
+                <li className="text-gray-800 py-1 flex justify-center pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    Teamwork
+                  </p>
+                </li>
+                <li className="text-gray-800 py-1 flex justify-center pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    Leadership
+                  </p>
+                </li>
+                <li className="text-gray-800 flex justify-center py-1 pr-5">
+                  <p className='text-sm bg-teal-500 px-2 py-1 rounded-full text-white'>
+                    Emphaty
+                  </p>
+                </li>
               </ul>
             </div>
           </div>
@@ -197,16 +274,18 @@ export default function Home() {
         exit={{opacity: 0}}
         className='absolute w-full'
       >
-      
-        <section id='contact' className='h-screen flex items-center justify-center bg-gradient-to-l from-cyan-500 to-teal-500'>
+        <section id='contact' className='h-screen flex items-center justify-center bg-gradient-to-r from-cyan-500 to-teal-500'>
           <form
             onSubmit={formik.handleSubmit}
-            className='bg-white flex flex-col md:flex-row rounded-lg w-3/4 font-latoRegular'
+            className='bg-white flex flex-col md:flex-row rounded-lg font-latoRegular shadow-lg w-11/12'
           >
             <div className='flex-1 text-gray-700 p-5'>
-              <h1 className='text-2xl md:text-4xl lg:text-5xl pb-2 font-latoBold dark:text-teal-500'>
-                Let's connect 🤝
-              </h1>
+              <div className='flex items-center'>
+                <h1 className='text-2xl md:text-3xl font-bold px-2 lg:text-4xl pb-2 font-latoBold text-teal-500'>
+                  Let's connect 
+                </h1>
+                <GiNothingToSay className='text-4xl text-teal-500'/>
+              </div>
               <p className='text-md text-gray-500 dark:text-gray-200'>
                 If you have an application you are interested in developing, 
                 a feature you need built, or a project that needs coding. I'd 

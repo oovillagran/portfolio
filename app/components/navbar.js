@@ -48,8 +48,8 @@ export default function Navbar() {
                 <ul className='bg-white h-screen md:h-auto items-center justify-center md:flex'>
                   <li className="pb-6 md:pb-0 text-center transition-transform transform hover:scale-105 md:hover:bg-transparent">
                     <a
-                      className="md:bg-gradient-to-r from-cyan-500 to-teal-500 md:text-white text-teal-700 md:font-normal font-bold text-2xl md:text-base px-4 py-2 rounded-md ml-8 hover:text-gray-400 md:hover:text-gray-800"
-                      href="#"
+                      className="hover:bg-teal-500 md:bg-gradient-to-r from-cyan-500 to-teal-500 md:text-white text-teal-700 md:font-normal font-bold text-2xl md:text-base px-4 py-2 rounded-md ml-8 hover:text-white md:hover:text-gray-800"
+                      href="/"
                       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                       Home
@@ -57,7 +57,7 @@ export default function Navbar() {
                   </li>
                   <li className="pb-6 md:pb-0 text-center transition-transform transform hover:scale-105 md:hover:bg-transparent">
                     <a
-                      className="md:bg-gradient-to-r from-cyan-500 to-teal-500 md:text-white text-teal-700 md:font-normal font-bold text-2xl md:text-base px-4 py-2 rounded-md ml-8 hover:text-gray-400 md:hover:text-gray-800"
+                      className="hover:bg-teal-500 md:bg-gradient-to-r from-cyan-500 to-teal-500 md:text-white text-teal-700 md:font-normal font-bold text-2xl md:text-base px-4 py-2 rounded-md ml-8 hover:text-white md:hover:text-gray-800"
                       href="#portfolio"
                       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
@@ -66,7 +66,7 @@ export default function Navbar() {
                   </li>
                   <li className="pb-6 md:pb-0 text-center transition-transform transform hover:scale-105 md:hover:bg-transparent">
                     <a
-                      className="md:bg-gradient-to-r from-cyan-500 to-teal-500 md:text-white text-teal-700 md:font-normal font-bold text-2xl md:text-base px-4 py-2 rounded-md ml-8 hover:text-gray-400 md:hover:text-gray-800"
+                      className="hover:bg-teal-500 md:bg-gradient-to-r from-cyan-500 to-teal-500 md:text-white text-teal-700 md:font-normal font-bold text-2xl md:text-base px-4 py-2 rounded-md ml-8 hover:text-white md:hover:text-gray-800"
                       href="#about"
                       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
@@ -75,7 +75,7 @@ export default function Navbar() {
                   </li>
                   <li className="md:pr-10 pb-6 md:pb-0 text-center transition-transform transform hover:scale-105 md:hover:bg-transparent">
                     <a
-                      className="md:bg-gradient-to-r from-cyan-500 to-teal-500 md:text-white text-teal-700 md:font-normal font-bold text-2xl md:text-base px-4 py-2 rounded-md ml-8 hover:text-gray-400 md:hover:text-gray-800"
+                      className="hover:bg-teal-500 md:bg-gradient-to-r from-cyan-500 to-teal-500 md:text-white text-teal-700 md:font-normal font-bold text-2xl md:text-base px-4 py-2 rounded-md ml-8 hover:text-white md:hover:text-gray-800"
                       href="#contact"
                       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
