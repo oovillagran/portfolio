@@ -8,6 +8,7 @@ import skills from '../public/skills.jpg';
 import project1 from '../public/project1.png';
 import project2 from '../public/project2.png';
 import project3 from '../public/project3.png';
+import project4 from '../public/project4.png';
 import web6 from '../public/EasyClinics-Appointment.png';
 import '@tailwindcss/forms';
 import formImage from '../public/form.png';
@@ -91,11 +92,11 @@ export default function Home() {
               I offer from a wide range of services, including programming and teaching.
             </p>
           </div>
-          <div className='flex flex-col gap-10 py-10 md:flex-row md:flex-wrap min-h-screen items-center justify-center bg-slate-100'>
+          <div className='flex flex-col gap-10 py-10 md:flex-row md:flex-wrap min-h-screen items-center justify-center rounded-xl bg-slate-100 dark:bg-gray-600'>
             <div className='group h-96 w-96 [perspective:1000px]'>
               <div className='relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(360deg)]'>
                 <div className='absolute inset-0'>
-                  <Image src={project1} className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
+                  <Image src={project1} alt='project-image' className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
                 </div>
                 <div className='absolute inset-0 h-full w-full rounded-xl bg-black/60 px-12 text-center text-slate-200 [transform:rotateY(360deg)] transition-opacity opacity-0 group-hover:opacity-100'>
                   <div className='flex min-h-full flex-col items-center justify-center'>
@@ -140,7 +141,7 @@ export default function Home() {
             <div className='group h-96 w-96 [perspective:1000px]'>
               <div className='relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(360deg)]'>
                 <div className='absolute inset-0'>
-                  <Image src={project2} className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
+                  <Image src={project2} alt='project-image' className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
                 </div>
                 <div className='absolute inset-0 h-full w-full rounded-xl bg-black/60 px-12 text-center text-slate-200 [transform:rotateY(360deg)] transition-opacity opacity-0 group-hover:opacity-100'>
                   <div className='flex min-h-full flex-col items-center justify-center'>
@@ -188,7 +189,7 @@ export default function Home() {
             <div className='group h-96 w-96 [perspective:1000px]'>
               <div className='relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(360deg)]'>
                 <div className='absolute inset-0'>
-                  <Image src={project3} className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
+                  <Image src={project3} alt='project-image' className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
                 </div>
                 <div className='absolute inset-0 h-full w-full rounded-xl bg-black/60 px-12 text-center text-slate-200 [transform:rotateY(360deg)] transition-opacity opacity-0 group-hover:opacity-100'>
                   <div className='flex min-h-full flex-col items-center justify-center'>
@@ -236,41 +237,45 @@ export default function Home() {
             <div className='group h-96 w-96 [perspective:1000px]'>
               <div className='relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(360deg)]'>
                 <div className='absolute inset-0'>
-                  <Image src={web6} className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
+                  <Image src={project4} alt='project-image' className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
                 </div>
                 <div className='absolute inset-0 h-full w-full rounded-xl bg-black/60 px-12 text-center text-slate-200 [transform:rotateY(360deg)] transition-opacity opacity-0 group-hover:opacity-100'>
                   <div className='flex min-h-full flex-col items-center justify-center'>
                     <h1 className='text-3xl font-bold text-teal-200'>
-                      Easy Clinics
+                      MyXpenses
                     </h1>
                     <p className='text-lg'>
                       FrontEnd and BackEnd App
                     </p>
                     <p className='text-base'>
-                      This awesome app allows you to make an appointment with your favorite doctor in your preferred city.
+                      This is a mobile web application that allows you to manage your budget, organize your list of daily expenses and take control over your incomes/expenses.
                     </p>
                     <div className='flex justify-between w-full'>
                       <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                        See Live
+                        <a href='https://rails-hc3r.onrender.com' target='_blank' rel='noopener noreferrer'>
+                          See Live
+                        </a>
                         <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
                       </button>
                       <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                        See Source
+                        <a href='https://github.com/oovillagran/myxpenses' target='_blank' rel='noopener noreferrer'>
+                          See Source
+                        </a>
                         <AiFillGithub className='inline-block ml-2 text-xl' />
                       </button>
                     </div>
                     <div className='flex items-center flex-wrap py-5 justify-center'>
                       <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
-                        React
-                      </p>
-                      <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
-                        Redux
+                        Ruby
                       </p>
                       <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
                         Rails
                       </p>
                       <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
                         PostgreSQL
+                      </p>
+                      <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
+                        Full-Stack
                       </p>
                     </div>
                   </div>
