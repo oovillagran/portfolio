@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import oscardev from '../public/ovg-avatar.png';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar';
 import { useDarkMode } from './DarkModeContext';
 import Connect from './components/Connect';
 import Cards from './components/Cards';
@@ -33,7 +33,7 @@ export default function Home() {
           </div>
           <Connect />
           <div className="relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mx-auto overflow-hidden md:h-96 md:w-96">
-            <Image className='w-32 h-32 mx-auto my-4' src={oscardev} alt="emoticon" layout='fill' objectFit='cover' objectPosition='center' />
+            <Image className='w-50 h-50 mx-auto my-4' src={oscardev} alt="emoticon" />
           </div>
         </section>
         {/* second section */}

@@ -8,7 +8,7 @@ export default function Skills() {
   return (
     <div className='lg:flex gap-10'>
       <div className="md:w-1/3 text-center shadow-lg p-10 rounded-xl my-10 mx-10 md:mx-0 dark:bg-white">
-        <Image src='/languages.jpg' alt='languages-icon' width={200} height={200} className="mx-auto rounded-full" objectFit='cover' />
+        <Image src='/languages.jpg' alt='languages-icon' width={200} height={200} className="mx-auto rounded-full" />
         <h3 className="text-lg font-medium pt-8 pb-2">Languages</h3>
         <p className="py-2 md:text-xl">
           Creating elegant and practical app suited for your needs.
