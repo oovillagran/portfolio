@@ -5,6 +5,8 @@
 
   <h1><b>Oscar Villagran's Portfolio</b></h1>
   <img src="public/readme.png" alt="Readme Image">
+  <br>
+  <img src="public/readme_dark.png" alt="Readme Image">
 </div>
 
 <!-- TABLE OF CONTENTS -->
