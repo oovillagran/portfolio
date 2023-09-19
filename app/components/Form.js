@@ -65,15 +65,15 @@ export default function Form() {
           <div className='flex-1 text-gray-700 p-5'>
             <div className='flex items-center'>
               <h1 className='text-2xl md:text-3xl font-bold px-2 lg:text-4xl pb-2 font-latoBold text-teal-500'>
-                  Lets connect 
+                  Let&apos;s connect 
                 </h1>
                 <GiNothingToSay className='text-4xl text-teal-500'/>
               </div>
               <p className='text-md text-gray-500 dark:text-gray-200'>
                 If you have an application you are interested in developing, 
-                a feature you need built, or a project that needs coding. I would 
+                a feature you need built, or a project that needs coding. I&apos;d 
                 love to help with it. Feel free to reach out to me. 
-                I will do my best to get back to you!
+                I&apos;ll do my best to get back to you!
               </p>
               <div className='mt-5'>
                 {/* Name input field */}

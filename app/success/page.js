@@ -33,7 +33,7 @@ export default function Success() {
             Thanks for the message 💫
           </h1>
           <p className="text-md text-gray-500 dark:text-gray-200">
-            I will get back to you as soon as possible.
+            I&apos;ll get back to you as soon as possible.
           </p>
         </div>
         <Confetti gravity={0.1} numberOfPieces={pieces} />
