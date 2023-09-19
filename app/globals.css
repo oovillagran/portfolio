@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: rgb(20 184 166);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "burtons";
+  src: url(../public/Burtons.otf);
+}
+
+@font-face {
+  font-family: "latoRegular";
+  src: url(../public/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: "latoBold";
+  src: url(../public/Lato-Bold.ttf);
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+/* Dark mode background color */
+.dark .bg-white {
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity)); /* Change this to your desired dark mode background color */
+}
