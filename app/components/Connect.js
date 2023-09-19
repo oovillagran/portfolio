@@ -3,7 +3,7 @@ import {AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillInstagram, AiFi
 export default function Connect() {
   return (
     <div>
-      <h4 className='uppercase font-bold text-teal-600 text-center text-md pb-5'>Let's connect</h4>
+      <h4 className='uppercase font-bold text-teal-600 text-center text-md pb-5'>Lets connect</h4>
       <div className="text-3xl flex justify-center gap-8 py-3 text-gray-600">
         <a href='https://twitter.com/oovillagran' target='_blank' rel='noopener noreferrer'>
           <AiFillTwitterCircle className='dark:text-gray-200 transition-transform transform hover:scale-110 hover:text-teal-600 dark:hover:text-teal-600'/>

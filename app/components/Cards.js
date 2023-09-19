@@ -111,7 +111,7 @@ export default function Cards() {
           <div className='absolute inset-0 h-full w-full rounded-xl bg-black/60 px-12 text-center text-slate-200 [transform:rotateY(360deg)] transition-opacity opacity-0 group-hover:opacity-100'>
             <div className='flex min-h-full flex-col items-center justify-center'>
               <h1 className='text-3xl font-bold text-teal-200'>
-                Movie's Time App
+                Movies Time App
               </h1>
               <p className='text-lg'>
                 FrontEnd

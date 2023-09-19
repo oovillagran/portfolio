@@ -24,12 +24,12 @@ export default function Home() {
         <section className="min-h-screen">
           <Navbar />
           <div className="text-center p-10 py-15">
-            <h2 className='text-5xl py-2 text-teal-600 font-bold md:text-6xl'>Hi, I'm Oscar</h2>
+            <h2 className='text-5xl py-2 text-teal-600 font-bold md:text-6xl'>Hi, I am Oscar</h2>
             <h3 className='text-2xl py-2 font-bold mb-4 md:text-3xl dark:text-gray-200'>Software developer</h3>
             <p className='text-md py-5 leading-8 text-gray-800 md:text-xl mx-auto dark:text-gray-200'>
-              I'm a software engineer based in Santo Domingo, Ecuador. I have a passion 
+              I am a software engineer based in Santo Domingo, Ecuador. I have a passion 
               for creating beautiful and functional websites and applications. 
-              Join me down below and let's get in touch!</p>
+              Join me down below and lets get in touch!</p>
           </div>
           <Connect />
           <div className="relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mx-auto overflow-hidden md:h-96 md:w-96">
@@ -42,7 +42,7 @@ export default function Home() {
             <h3 className="text-3xl text-center py-1 dark:text-gray-200">Portfolio</h3>
             <p className="text-md py-2 leading-8 mb-4 text-gray-800 md:text-xl dark:text-gray-200">
               Since the beginning of my journey as a software developer, 
-              I've done <span className="text-teal-500 font-bold">remote 
+              I have done <span className="text-teal-500 font-bold">remote 
               work</span>, doing <span className="text-teal-500 font-bold">pair-programming</span>, 
               and <span className="text-teal-500 font-bold">collaborated </span> 
               with talented people from all over the world.
@@ -61,7 +61,7 @@ export default function Home() {
             </h3>
             <p className="text-md py-2 leading-6 mb-4 text-gray-800 md:text-xl dark:text-gray-200">
               Since the beginning of my journey as a software developer, 
-              I've done <span className="text-teal-500 font-bold">remote 
+              I have done <span className="text-teal-500 font-bold">remote 
               work</span>, doing <span className="text-teal-500 font-bold">pair-programming</span>, 
               and <span className="text-teal-500 font-bold">collaborated </span> 
               with talented people from all over the world.
