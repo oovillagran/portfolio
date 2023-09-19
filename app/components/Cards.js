@@ -154,7 +154,7 @@ export default function Cards() {
       <div className='group h-96 w-96 [perspective:1000px]'>
         <div className='relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(360deg)]'>
           <div className='absolute inset-0'>
-            <Image src='/project4.png' alt='project-image' width={500} height={500} className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
+            <Image src='/projectN4.png' alt='project-image' width={500} height={500} className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
           </div>
           <div className='absolute inset-0 h-full w-full rounded-xl bg-black/60 px-12 text-center text-slate-200 [transform:rotateY(360deg)] transition-opacity opacity-0 group-hover:opacity-100'>
             <div className='flex min-h-full flex-col items-center justify-center'>
@@ -202,7 +202,7 @@ export default function Cards() {
       <div className='group h-96 w-96 [perspective:1000px]'>
         <div className='relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(360deg)]'>
           <div className='absolute inset-0'>
-            <Image src='/project5.png' alt='project-image' width={500} height={500} className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
+            <Image src='/projectN5.png' alt='project-image' width={500} height={500} className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
           </div>
           <div className='absolute inset-0 h-full w-full rounded-xl bg-black/60 px-12 text-center text-slate-200 [transform:rotateY(360deg)] transition-opacity opacity-0 group-hover:opacity-100'>
             <div className='flex min-h-full flex-col items-center justify-center'>
