@@ -4,6 +4,7 @@ import { motion as m } from 'framer-motion';
 import { useRouter } from "next/navigation";
 import {GiNothingToSay} from 'react-icons/gi';
 import Image from "next/image";
+import '@tailwindcss/forms';
 
 export default function Form() {
   // Router

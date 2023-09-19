@@ -202,26 +202,30 @@ export default function Cards() {
       <div className='group h-96 w-96 [perspective:1000px]'>
         <div className='relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(360deg)]'>
           <div className='absolute inset-0'>
-            <Image src='/project6.png' alt='project-image' width={500} height={500} className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
+            <Image src='/project5.png' alt='project-image' width={500} height={500} className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/40' />
           </div>
           <div className='absolute inset-0 h-full w-full rounded-xl bg-black/60 px-12 text-center text-slate-200 [transform:rotateY(360deg)] transition-opacity opacity-0 group-hover:opacity-100'>
             <div className='flex min-h-full flex-col items-center justify-center'>
               <h1 className='text-3xl font-bold text-teal-200'>
-                Easy Clinics
+                Space Travelers
               </h1>
               <p className='text-lg'>
-                FrontEnd and BackEnd App
+                FrontEnd App
               </p>
               <p className='text-base'>
-                This awesome app allows you to make an appointment with your favorite doctor in your preferred city.
+                This awesome app designed for a company offering commercial and scientific space travel services.
               </p>
               <div className='flex justify-between w-full'>
                 <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                  See Live
+                  <a href='https://space-hubs-travelers.onrender.com/' target='_blank' rel='noopener noreferrer'>
+                    See Live
+                  </a>  
                   <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
                 </button>
                 <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                  See Source
+                  <a href='https://github.com/oovillagran/space_travelers' target='_blank' rel='noopener noreferrer'>
+                    See Source
+                  </a>
                   <AiFillGithub className='inline-block ml-2 text-xl' />
                 </button>
               </div>
@@ -233,10 +237,10 @@ export default function Cards() {
                   Redux
                 </p>
                 <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
-                  Rails
+                  CSS
                 </p>
                 <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
-                  PostgreSQL
+                  HTML
                 </p>
               </div>
             </div>
