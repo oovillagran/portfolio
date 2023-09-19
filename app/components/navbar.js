@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import '@tailwindcss/forms';
 import { useDarkMode } from '../DarkModeContext';
@@ -7,11 +7,19 @@ export default function Navbar() {
   const { darkMode, toggleDarkMode } = useDarkMode();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  if(!mobileMenuOpen) {
-    document.body.style.overflow = 'auto';
-  } else {
-    document.body.style.overflow = 'hidden';
-  };
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      if(!mobileMenuOpen) {
+        document.body.style.overflow = 'auto';
+      } else {
+        document.body.style.overflow = 'hidden';
+      };
+  
+      return () => {
+        document.body.style.overflow = 'auto';
+      };
+    }
+  }, [mobileMenuOpen]);
 
   return (
     <div className={darkMode ? 'dark' : ''}>
