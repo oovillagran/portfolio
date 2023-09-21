@@ -1,25 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import '@tailwindcss/forms';
 import { useDarkMode } from '../DarkModeContext';
+import Link from 'next/link';
 
 export default function Navbar() {
   const { darkMode, toggleDarkMode } = useDarkMode();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    if (typeof document !== 'undefined') {
-      if(!mobileMenuOpen) {
-        document.body.style.overflow = 'auto';
-      } else {
-        document.body.style.overflow = 'hidden';
-      };
-  
-      return () => {
-        document.body.style.overflow = 'auto';
-      };
-    }
-  }, [mobileMenuOpen]);
+  const openMobileMenu = () => {
+    setMobileMenuOpen(true);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  }
 
   return (
     <div className={darkMode ? 'dark' : ''}>
@@ -40,7 +35,7 @@ export default function Navbar() {
                   <div className="md:hidden">
                     {/* Hamburger menu button */}
                     <button
-                      onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                      onClick={mobileMenuOpen ? closeMobileMenu : openMobileMenu}
                       className="px-5 text-lg dark:text-gray-200"
                     >
                       <span className={`block dark:text-gray-200 h-1 w-6 bg-cyan-500 mb-1 ${mobileMenuOpen ? 'transform rotate-45 translate-y-1' : ''}`}></span>
@@ -55,40 +50,40 @@ export default function Navbar() {
               >
                 <ul className='bg-white h-screen md:h-auto items-center justify-center md:flex'>
                   <li className="pb-6 md:pb-0 text-center transition-transform transform hover:scale-105 md:hover:bg-transparent">
-                    <a
+                    <Link
                       className="hover:bg-teal-500 md:bg-gradient-to-r from-cyan-500 to-teal-500 md:text-white text-teal-700 md:font-normal font-bold text-2xl md:text-base px-4 py-2 rounded-md ml-8 hover:text-white md:hover:text-gray-800"
-                      href="/"
+                      href="/#home"
                       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li className="pb-6 md:pb-0 text-center transition-transform transform hover:scale-105 md:hover:bg-transparent">
-                    <a
+                    <Link
                       className="hover:bg-teal-500 md:bg-gradient-to-r from-cyan-500 to-teal-500 md:text-white text-teal-700 md:font-normal font-bold text-2xl md:text-base px-4 py-2 rounded-md ml-8 hover:text-white md:hover:text-gray-800"
-                      href="#portfolio"
+                      href="/#portfolio"
                       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                       Portfolio
-                    </a>
+                    </Link>
                   </li>
                   <li className="pb-6 md:pb-0 text-center transition-transform transform hover:scale-105 md:hover:bg-transparent">
-                    <a
+                    <Link
                       className="hover:bg-teal-500 md:bg-gradient-to-r from-cyan-500 to-teal-500 md:text-white text-teal-700 md:font-normal font-bold text-2xl md:text-base px-4 py-2 rounded-md ml-8 hover:text-white md:hover:text-gray-800"
-                      href="#about"
+                      href="/#about"
                       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li className="md:pr-10 pb-6 md:pb-0 text-center transition-transform transform hover:scale-105 md:hover:bg-transparent">
-                    <a
+                    <Link
                       className="hover:bg-teal-500 md:bg-gradient-to-r from-cyan-500 to-teal-500 md:text-white text-teal-700 md:font-normal font-bold text-2xl md:text-base px-4 py-2 rounded-md ml-8 hover:text-white md:hover:text-gray-800"
-                      href="#contact"
+                      href="/#contact"
                       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

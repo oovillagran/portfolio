@@ -1,9 +1,4 @@
 import Image from 'next/image';
-// import project1 from '..../public/project1.png'
-// import project2 from '.../public/project2.png';
-// import project3 from '.../public/project3.png';
-// import project4 from '.../public/project4.png';
-// import web6 from '.../public/EasyClinics-Appointment.png';
 import {AiFillGithub} from 'react-icons/ai';
 import {LuArrowDownRightFromCircle} from 'react-icons/lu'
 
@@ -27,18 +22,18 @@ export default function Cards() {
                 This is an HTML/CSS & JavaScript capstone project for the Full-Stack Web Development Program at Microverse. This capstone project is about a conference page.
               </p>
               <div className='flex justify-between w-full'>
-                <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                  <a href='https://oovillagran.github.io/Global-Summit-Conference-/' target='_blank' rel='noopener noreferrer'>
+                <a href='https://oovillagran.github.io/Global-Summit-Conference-/' target='_blank' rel='noopener noreferrer'>
+                  <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
                     See Live
-                  </a>
-                  <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
-                </button>
-                <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                  <a href='https://github.com/oovillagran/Global-Summit-Conference-' target='_blank' rel='noopener noreferrer'>
+                    <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
+                  </button>
+                </a>
+                <a href='https://github.com/oovillagran/Global-Summit-Conference-' target='_blank' rel='noopener noreferrer'>
+                  <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
                     See Source
-                  </a>
-                  <AiFillGithub className='inline-block ml-2 text-xl' />
-                </button>
+                    <AiFillGithub className='inline-block ml-2 text-xl' />
+                  </button>
+                </a>
               </div>
               <div className='flex items-center flex-wrap py-5 justify-center'>
                 <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
@@ -72,18 +67,18 @@ export default function Cards() {
                 Central Cinema Trends is a webapp that shows you the most popular movies at the moment.
               </p>
               <div className='flex justify-between w-full'>
-                <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                  <a href='https://centralcinematrends.onrender.com/' target='_blank' rel='noopener noreferrer'>
+                <a href='https://centralcinematrends.onrender.com/' target='_blank' rel='noopener noreferrer'>
+                  <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
                     See Live
-                  </a>
-                  <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
-                </button>
-                <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                  <a href='https://github.com/oovillagran/Central-Cinema-Trends' target='_blank' rel='noopener noreferrer'>
+                    <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
+                  </button>
+                </a>
+                <a href='https://github.com/oovillagran/Central-Cinema-Trends' target='_blank' rel='noopener noreferrer'>
+                  <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
                     See Source
-                  </a>
-                  <AiFillGithub className='inline-block ml-2 text-xl' />
-                </button>
+                    <AiFillGithub className='inline-block ml-2 text-xl' />
+                  </button>
+                </a>
               </div>
               <div className='flex items-center flex-wrap py-5 justify-center'>
                 <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
@@ -120,18 +115,18 @@ export default function Cards() {
                 Designed for movie lovers. Powered by React and Redux, this application categorizes the top trending movies into four sections.
               </p>
               <div className='flex justify-between w-full'>
-                <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                  <a href='https://movies-time.onrender.com/' target='_blank' rel='noopener noreferrer'>
+                <a href='https://movies-time.onrender.com/' target='_blank' rel='noopener noreferrer'>
+                  <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
                     See Live
-                  </a>
-                  <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
-                </button>
-                <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                  <a href='https://github.com/oovillagran/Movie-s-time-app' target='_blank' rel='noopener noreferrer'>
+                    <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
+                  </button>
+                </a>
+                <a href='https://github.com/oovillagran/Movie-s-time-app' target='_blank' rel='noopener noreferrer'>
+                  <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
                     See Source
-                  </a>
-                  <AiFillGithub className='inline-block ml-2 text-xl' />
-                </button>
+                    <AiFillGithub className='inline-block ml-2 text-xl' />
+                  </button>
+                </a>
               </div>
               <div className='flex items-center flex-wrap py-5 justify-center'>
                 <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
@@ -168,18 +163,18 @@ export default function Cards() {
                 This is a mobile web application that allows you to manage your budget, organize your list of daily expenses and take control over your incomes/expenses.
               </p>
               <div className='flex justify-between w-full'>
-                <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                  <a href='https://rails-hc3r.onrender.com' target='_blank' rel='noopener noreferrer'>
+                <a href='https://rails-hc3r.onrender.com' target='_blank' rel='noopener noreferrer'>
+                  <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
                     See Live
-                  </a>
-                  <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
-                </button>
-                <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                  <a href='https://github.com/oovillagran/myxpenses' target='_blank' rel='noopener noreferrer'>
+                    <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
+                  </button>
+                </a>
+                <a href='https://github.com/oovillagran/myxpenses' target='_blank' rel='noopener noreferrer'>
+                  <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
                     See Source
-                  </a>
-                  <AiFillGithub className='inline-block ml-2 text-xl' />
-                </button>
+                    <AiFillGithub className='inline-block ml-2 text-xl' />
+                  </button>
+                </a>
               </div>
               <div className='flex items-center flex-wrap py-5 justify-center'>
                 <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
@@ -216,18 +211,18 @@ export default function Cards() {
                 This awesome app designed for a company offering commercial and scientific space travel services.
               </p>
               <div className='flex justify-between w-full'>
-                <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                  <a href='https://space-hubs-travelers.onrender.com/' target='_blank' rel='noopener noreferrer'>
+                <a href='https://space-hubs-travelers.onrender.com/' target='_blank' rel='noopener noreferrer'>
+                  <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
                     See Live
-                  </a>  
-                  <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
-                </button>
-                <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                  <a href='https://github.com/oovillagran/space_travelers' target='_blank' rel='noopener noreferrer'>
+                    <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
+                  </button>
+                </a>  
+                <a href='https://github.com/oovillagran/space_travelers' target='_blank' rel='noopener noreferrer'>
+                  <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
                     See Source
-                  </a>
-                  <AiFillGithub className='inline-block ml-2 text-xl' />
-                </button>
+                    <AiFillGithub className='inline-block ml-2 text-xl' />
+                  </button>
+                </a>
               </div>
               <div className='flex items-center flex-wrap py-5 justify-center'>
                 <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>
@@ -264,18 +259,18 @@ export default function Cards() {
                 This awesome app allows you to make an appointment with your favorite doctor in your preferred city.
               </p>
               <div className='flex justify-between w-full'>
-                <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                  <a href='https://easyclinic-client.vercel.app/' target='_blank' rel='noopener noreferrer'>
+                <a href='https://easyclinic-client.vercel.app/' target='_blank' rel='noopener noreferrer'>
+                  <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
                     See Live
-                  </a>
-                  <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
-                </button>
-                <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
-                  <a href='https://github.com/oovillagran/final-capstone-back-end' target='_blank' rel='noopener noreferrer'>
+                    <LuArrowDownRightFromCircle className='inline-block ml-2 text-xl' />
+                  </button>
+                </a>
+                <a href='https://github.com/oovillagran/final-capstone-back-end' target='_blank' rel='noopener noreferrer'>
+                  <button className='mt-2 rounded-md bg-gradient-to-l from-cyan-500 to-teal-600 py-1 px-2 text-sm hover:text-gray-800 transition-transform transform hover:scale-110'>
                     See Source
-                  </a>
-                  <AiFillGithub className='inline-block ml-2 text-xl' />
-                </button>
+                    <AiFillGithub className='inline-block ml-2 text-xl' />
+                  </button>
+                </a>
               </div>
               <div className='flex items-center flex-wrap py-5 justify-center'>
                 <p className='text-sm bg-teal-500 px-2 py-1 mr-5 mb-2 rounded-full text-white'>

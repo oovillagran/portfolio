@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import oscardev from '../public/ovg-avatar.png';
-import Navbar from './components/navbar';
+import Navbar from './components/navbari';
 import { useDarkMode } from './DarkModeContext';
 import Connect from './components/Connect';
 import Cards from './components/Cards';
@@ -21,7 +21,7 @@ export default function Home() {
       </Head>
 
       <main className='bg-white px-5 md:px-10 dark:bg-gray-900'>
-        <section className="min-h-screen">
+        <section id='home' className="min-h-screen">
           <Navbar />
           <div className="text-center p-10 py-15">
             <h2 className='text-5xl py-2 text-teal-600 font-bold md:text-6xl'>
@@ -33,7 +33,7 @@ export default function Home() {
             <p className='text-md py-5 leading-8 text-gray-800 md:text-xl mx-auto dark:text-gray-200'>
               I&apos;m a software developer based in Santo Domingo, Ecuador, 
               with a passion for creating elegant and <span className="text-teal-500 font-bold">functional websites </span> 
-              and <span className="text-teal-500 font-bold">applications </span>. I utilize various programming languages and tools 
+              and <span className="text-teal-500 font-bold">applications</span>. <br />I utilize various programming languages and tools 
               such as JavaScript, Ruby, React, Rails, and database management 
               with PostgreSQL. <br />
               Feel free to explore my work below and let&apos;s get in touch!</p>
