@@ -71,7 +71,7 @@ export default function Home() {
               with talented people from all over the world.
             </p>
             <p className="text-md py-2 leading-6 mb-4 text-gray-800 md:text-xl dark:text-gray-200">
-              I can help you build a product , feature or website. Look through some of my work and experience!
+              I can help you build a product, feature or website. Look through some of my work and experience!
             <br /> 
               If you like what you see and have a project you need coded, don’t hesitate to contact me.
             </p>
