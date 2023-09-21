@@ -11,7 +11,7 @@ export default function Skills() {
         <Image src='/languages.jpg' alt='languages-icon' width={200} height={200} className="mx-auto rounded-full" />
         <h3 className="text-lg font-medium pt-8 pb-2">Languages</h3>
         <p className="py-2 md:text-xl">
-          Creating elegant and practical app suited for your needs.
+          Programming languages I use:
         </p>
         <h4 className="py-4 text-teal-600">Languages I use</h4>
         <ul className='flex text-center items-center justify-center flex-wrap mx-auto'>
@@ -51,7 +51,7 @@ export default function Skills() {
         <Image src='/framework.jpg' alt='framework-image' width={200} height={200} className="rounded-full mx-auto" />
           <h3 className="text-lg font-medium pt-8 pb-2">Frameworks</h3>
           <p className="py-2 md:text-xl">
-            Creating awesome and practical apps.
+            Creating awesome and practical apps:
           </p>
           <h4 className="py-4 text-teal-600">Frameworks I use</h4>
           <ul className='flex text-center items-center justify-center flex-wrap mx-auto'>
@@ -91,7 +91,7 @@ export default function Skills() {
           <Image src='/skills.jpg' alt='soft_skills-image' width={125} height={125} className="mx-auto" />
           <h3 className="text-lg font-medium pt-8 pb-2">Skills</h3>
           <p className="py-2 md:text-xl">
-            Soft skills developed along my career.
+            Soft skills developed along my career:
           </p>
           <h4 className="py-4 text-teal-600">My potential soft skills are</h4>
           <ul className='flex text-center items-center justify-center flex-wrap mx-auto'>
