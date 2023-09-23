@@ -2,7 +2,7 @@
 import { motion as m } from "framer-motion";
 import { useEffect, useState } from "react";
 import Confetti from "react-confetti";
-import Navbar from "../components/navbari";
+import Navbar from "../components/Navbar";
 import { useDarkMode } from "../DarkModeContext";
 
 export default function Success() {

@@ -71,7 +71,7 @@ export default function Form() {
               </div>
               <p className='text-md text-gray-500 dark:text-gray-200'>
                 If you have an application you are interested in developing, 
-                a feature you need built, or a project that needs coding. I&apos;d 
+                a feature you need built or a project that needs coding. I&apos;d 
                 love to help with it. Feel free to reach out to me. 
                 I&apos;ll do my best to get back to you!
               </p>
