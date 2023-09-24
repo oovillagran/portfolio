@@ -2,7 +2,7 @@
 import { motion as m } from "framer-motion";
 import { useEffect, useState } from "react";
 import Confetti from "react-confetti";
-import Navbar from "../components/navbari";
+import Navbar from "../components/Navbar";
 import { useDarkMode } from "../DarkModeContext";
 
 export default function Success() {
@@ -28,8 +28,8 @@ export default function Success() {
     >
       <div className={darkMode ? "dark" : ""}>
         <Navbar />
-        <div className="bg-white justify-center m-auto rounded-lg w-3/4 font-latoRegular text-center p-8">
-          <h1 className="text-2xl pb-4 font-latoBold dark:text-teal-500">
+        <div className="bg-white my-44 justify-center m-auto rounded-lg w-3/4 font-latoRegular text-center p-4">
+          <h1 className="text-lg md:text-2xl pb-4 font-latoBold dark:text-teal-500">
             Thanks for the message 💫
           </h1>
           <p className="text-md text-gray-500 dark:text-gray-200">

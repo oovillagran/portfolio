@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
-import '@tailwindcss/forms';
+// import '@tailwindcss/forms';
 import { useDarkMode } from '../DarkModeContext';
 import Link from 'next/link';
 
@@ -17,10 +17,10 @@ export default function Navbar() {
   }
 
   return (
-    <div className={darkMode ? 'dark' : ''}>
+    <div className={`sticky-navbar border-b-0 shadow-md bg-white z-50 w-full px-10 ${darkMode ? 'dark' : ''}`}>
       {/* ... (Head and other content) */}
       <header className="bg-white dark:bg-gray-900 w-full">
-        <nav className="py-10 mb-5 flex-row justify-between">
+        <nav className="py-5 flex-row justify-between">
           <div className='justify-between w-full mx-auto md:items-center md:flex md:px-0'>
             <div className='md:flex items-center w-full'>
               <div className='flex justify-between py-3 md:py-5 md:w-full'>

@@ -52,10 +52,10 @@ export default function Form() {
 
   return (
     <m.div
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
-      className='absolute w-full'
+      // initial={{opacity: 0}}
+      // animate={{opacity: 1}}
+      // exit={{opacity: 0}}
+      // className='absolute w-full'
     >
       <section id='contact' className='h-screen flex items-center justify-center bg-gradient-to-r from-cyan-500 to-teal-500'>
         <form
@@ -71,7 +71,7 @@ export default function Form() {
               </div>
               <p className='text-md text-gray-500 dark:text-gray-200'>
                 If you have an application you are interested in developing, 
-                a feature you need built, or a project that needs coding. I&apos;d 
+                a feature you need built or a project that needs coding. I&apos;d 
                 love to help with it. Feel free to reach out to me. 
                 I&apos;ll do my best to get back to you!
               </p>
@@ -141,7 +141,7 @@ export default function Form() {
               </div>
             </div>
             <div className='flex-1 relative'>
-              <Image src='/form.png' alt="contact-image" fill className='object-cover rounded-lg' />
+              <Image src='/form.png' alt="contact-image" fill className='object-cover rounded-se-lg' />
             </div>
           </form>
         </section>
