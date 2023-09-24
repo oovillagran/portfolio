@@ -21,11 +21,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='bg-white px-5 md:px-10 dark:bg-gray-900'>
+      <main className='bg-white dark:bg-gray-900'>
         <section id='home' className="min-h-screen">
           <Navbar />
           <div className="text-center p-10 py-15">
-            <h2 className='text-5xl py-20 my-10 text-teal-600 font-bold md:text-6xl'>
+            <h2 className='text-5xl pt-20 my-10 text-teal-600 font-bold md:text-6xl'>
               Hi, I&apos;m Oscar
             </h2>
             <h3 className='text-2xl py-2 font-bold mb-4 md:text-3xl dark:text-gray-200'>

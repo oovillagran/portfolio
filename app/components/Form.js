@@ -52,10 +52,10 @@ export default function Form() {
 
   return (
     <m.div
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
-      className='absolute w-full'
+      // initial={{opacity: 0}}
+      // animate={{opacity: 1}}
+      // exit={{opacity: 0}}
+      // className='absolute w-full'
     >
       <section id='contact' className='h-screen flex items-center justify-center bg-gradient-to-r from-cyan-500 to-teal-500'>
         <form
@@ -141,7 +141,7 @@ export default function Form() {
               </div>
             </div>
             <div className='flex-1 relative'>
-              <Image src='/form.png' alt="contact-image" fill className='object-cover rounded-lg' />
+              <Image src='/form.png' alt="contact-image" fill className='object-cover rounded-se-lg' />
             </div>
           </form>
         </section>
